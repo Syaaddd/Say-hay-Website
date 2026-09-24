@@ -26,9 +26,9 @@ export default function Greets({ name }) {
         ))}
       </div>
       <p className="mt-6 text-center text-sm text-gray-500 dark:text-gray-400">
-        {name.trim()
-          ? 'Ganti nama di atas buat ngerasain sapaan yang beda ✨'
-          : 'Psst — tulis namamu dulu di atas biar lebih personal.'}
+                {name.trim()
+          ? 'Ganti nama di atas buat ngerasain sapaan yang beda.'
+          : 'Tulis namamu dulu di atas biar lebih personal.'}
       </p>
     </section>
   )
