@@ -39,5 +39,3 @@ export default function Hero({ name, setName }) {
     </main>
   )
 }
-
-</content>
