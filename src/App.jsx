@@ -7,7 +7,7 @@ import Footer from './components/Footer.jsx'
 export default function App() {
   const [name, setName] = useState('')
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-display transition-colors dark:bg-gray-950 dark:text-gray-100">
+    <div className="min-h-[100dvh] bg-zinc-50 text-zinc-900 font-display transition-colors dark:bg-zinc-950 dark:text-zinc-100">
       <Navbar />
       <Hero name={name} setName={setName} />
       <Greets name={name} />

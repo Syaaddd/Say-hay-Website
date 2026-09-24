@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Sun, Moon } from '@phosphor-icons/react'
 
 function getInitial() {
   const t = localStorage.getItem('theme')
@@ -16,17 +17,18 @@ export default function Navbar() {
   }, [dark])
 
   return (
-    <header className="sticky top-0 z-10 border-b border-gray-200/60 bg-white/80 backdrop-blur dark:border-gray-800 dark:bg-gray-950/80">
-      <nav className="mx-auto flex max-w-3xl items-center justify-between px-4 py-3">
-        <a href="#" className="text-lg font-bold tracking-tight">
-          say<span className="text-brand">·hi</span> <span aria-hidden>👋</span>
+    <header className="sticky top-0 z-10 border-b border-zinc-200/60 bg-zinc-50/80 backdrop-blur-sm dark:border-zinc-800 dark:bg-zinc-950/80">
+      <nav className="mx-auto flex h-16 max-w-3xl items-center justify-between px-4">
+        <a href="#" className="text-lg font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
+          sayhi
         </a>
         <button
           onClick={() => setDark((d) => !d)}
           aria-label="Ganti tema"
-          className="rounded-full border border-gray-300 px-3 py-1.5 text-sm transition-colors hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800"
+          className="flex items-center gap-1.5 rounded-lg border border-zinc-300 px-3 py-1.5 text-sm font-medium text-zinc-700 transition-colors hover:bg-zinc-100 active:scale-[0.98] dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800"
         >
-          {dark ? '☀️ Terang' : '🌙 Gelap'}
+          {dark ? <Sun size={16} weight="bold" /> : <Moon size={16} weight="bold" />}
+          {dark ? 'Terang' : 'Gelap'}
         </button>
       </nav>
     </header>
